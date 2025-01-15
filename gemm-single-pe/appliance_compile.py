@@ -15,7 +15,7 @@ SIMULATOR=False
 if SIMULATOR:
    fabdims = "8,3"
 else:
-   fabdims = "762,1172"
+   fabdims = "757,996"
 
 logger.info("Instantiating SDK Compiler")
 compiler = SdkCompiler()
@@ -27,7 +27,7 @@ artifact_path = compiler.compile(
     # Top level layout file
     "layout.csl",
     # Compiler arguments
-    f"--arch=wse3 -o out --fabric-dims={fabdims} --fabric-offsets=4,1 --params=M:4,K:4,N:6 " \
+    f"--arch=wse2 -o out --fabric-dims={fabdims} --fabric-offsets=4,1 --params=M:4,K:4,N:6 " \
     f"--memcpy --channels=1",
     # Output directory
     "."
